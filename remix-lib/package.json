@@ -33,7 +33,9 @@
     "web3": "0.20.6"
   },
   "scripts": {
-    "test": "standard && tape ./test/tests.js"
+    "test": "standard && tape ./test/tests.js",
+    "linkjsvmlib": "cd node_modules/ethereumjs-vm && rm -rf dist && ln -s ~/ethereumjs-vm/dist dist"
+
   },
   "repository": {
     "type": "git",

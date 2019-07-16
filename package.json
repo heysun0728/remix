@@ -10,6 +10,7 @@
     "bootstrap": "lerna bootstrap",
     "publish": "lerna publish",
     "release": "lerna bootstrap; lerna publish;",
-    "tag": "gulp; gulp publishTag;"
+    "tag": "gulp; gulp publishTag;",
+    "setupvm": "cd remix-debug && npm run linkjsvmlib && cd ~/remix/remix-lib && npm run linkjsvmlib && cd ~/remix/remix-solidity && npm run linkjsvmlib"
   }
 }
