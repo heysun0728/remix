@@ -18,7 +18,8 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "standard && mocha tests/ -t 300000"
+    "test": "standard && mocha tests/ -t 300000",
+    "postinstall": "cd node_modules/solc && wget --no-check-certificate -O soljson.js https://github.com/CyberMiles/lity/releases/download/v1.2.7/lity-v1.2.7-js"
   },
   "repository": {
     "type": "git",
