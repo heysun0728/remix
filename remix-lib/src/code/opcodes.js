@@ -3,9 +3,9 @@ var codes = {
   // 0x0 range - arithmetic ops
   // name, baseCost, off stack, on stack, dynamic, async
   0x00: ['STOP', 0, 0, 0, false],
-  0x01: ['ADD', 3, 2, 1, false],
-  0x02: ['MUL', 5, 2, 1, false],
-  0x03: ['SUB', 3, 2, 1, false],
+  0x01: ['UADD', 3, 2, 1, false],
+  0x02: ['UMUL', 5, 2, 1, false],
+  0x03: ['USUB', 3, 2, 1, false],
   0x04: ['DIV', 5, 2, 1, false],
   0x05: ['SDIV', 5, 2, 1, false],
   0x06: ['MOD', 5, 2, 1, false],
@@ -14,6 +14,9 @@ var codes = {
   0x09: ['MULMOD', 8, 3, 1, false],
   0x0a: ['EXP', 10, 2, 1, false],
   0x0b: ['SIGNEXTEND', 5, 2, 1, false],
+  0x0c: ['SADD', 3, 2, 1, false],
+  0x0d: ['SSUB', 3, 2, 1, false],
+  0x0e: ['SMUL', 3, 2, 1, false],
 
   // 0x10 range - bit ops
   0x10: ['LT', 3, 2, 1, false],
@@ -150,6 +153,9 @@ var codes = {
   0xf2: ['CALLCODE', 700, 7, 1, true, true],
   0xf3: ['RETURN', 0, 2, 0, false],
   0xf4: ['DELEGATECALL', 700, 6, 1, true, true],
+  0xf6: ['ISVALIDATOR', 3, 1, 1, false],
+  0xf8: ['FREEGAS', 3, 0, 0, false],
+  0xf9: ['RAND', 5, 0, 1, false],
   0xfa: ['STATICCALL', 700, 6, 1, true, true],
   0xfd: ['REVERT', 0, 2, 0, false],
 
