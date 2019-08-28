@@ -35,7 +35,7 @@
   "scripts": {
     "test": "standard && tape ./test/tests.js",
     "linkjsvmlib": "cd node_modules/ethereumjs-vm && rm -rf dist && ln -s ~/ethereumjs-vm/dist dist",
-    "postinstall": "cd node_modules/solc && wget --no-check-certificate -O soljson.js https://github.com/CyberMiles/lity/releases/download/v1.2.7/lity-v1.2.7-js"
+    "setup:solc": "cd node_modules/solc && wget --no-check-certificate -O soljson.js https://github.com/CyberMiles/lity/releases/download/v1.2.7/lity-v1.2.7-js"
   },
   "repository": {
     "type": "git",
